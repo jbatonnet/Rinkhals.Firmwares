@@ -1,0 +1,25 @@
+{
+    "$version": "1",
+
+    "name": "Anycubic Kobra 2 Pro firmware mirror",
+    "description": "A mirror for Anycubic Kobra 2 Pro stock firmwares",
+
+    "repository": "https://rinkhals.meowcat285.com",
+    "self": "https://cdn.meowcat285.com/rinkhals/Kobra%202%20Pro/manifest.json",
+
+    "firmwares": [
+        {
+            "version": "3.1.2.3",
+            "md5": "a3984c039ea6b94f9fe8a4b1682f38a7",
+            "url": "https://cdn.meowcat285.com/rinkhals/Kobra%202%20Pro/K2P_3.1.2.3.swu",
+            "supported_models": [ "K2P" ]
+        },
+        {
+            "version": "3.1.4",
+            "date": 1735207213,
+            "md5": "e12e44aee7343975bd1bbb5702236471",
+            "url": "https://cdn.meowcat285.com/rinkhals/Kobra%202%20Pro/K2P_3.1.4.swu",
+            "supported_models": [ "K2P" ]
+        }
+    ]
+}

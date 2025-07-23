@@ -1,0 +1,4 @@
+# python -m pip install -r scripts/requirements.txt
+
+paho-mqtt
+requests

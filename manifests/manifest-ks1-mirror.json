@@ -1,0 +1,109 @@
+{
+  "$version": "1",
+  "name": "Anycubic Kobra S1 firmware mirror",
+  "description": "A mirror for Anycubic Kobra S1 stock firmwares",
+  "repository": "https://rinkhals.meowcat285.com",
+  "self": "https://cdn.meowcat285.com/rinkhals/Kobra%20S1/manifest.json",
+  "firmwares": [
+    {
+      "version": "2.5.0.6",
+      "date": 1742569005,
+      "changes": "1.Impooved loading and unloading logic\n2.Improved video monitoring stability\t\n3.Other issues fixed",
+      "md5": "c0d7b3857602b2b3ed145fd195b3236d",
+      "url": "https://cdn.meowcat285.com/rinkhals/Kobra%20S1/KS1_2.5.0.6.swu",
+      "supported_models": [
+        "KS1"
+      ]
+    },
+    {
+      "version": "2.5.1.6",
+      "date": 1744017616,
+      "changes": "1.Optimize video monitoring stability\n2.Improve video resolution to 720P\n3.Reduce unnecessary actions before printing\n4.Optimize the cutting logic before Retraction\n5.Other bug fixes",
+      "md5": "3fd512d763084a0c8379569a1e61009f",
+      "url": "https://cdn.meowcat285.com/rinkhals/Kobra%20S1/KS1_2.5.1.6.swu",
+      "supported_models": [
+        "KS1"
+      ]
+    },
+    {
+      "version": "2.5.2.2",
+      "date": 1745225681,
+      "changes": "1.[Improve] File transfer stability\n2.[New] Mono print pause with feed/retract\n3.[New] Print score after completion",
+      "md5": "a5d38764605a077bca652bfc81a0dc98",
+      "url": "https://cdn.meowcat285.com/rinkhals/Kobra%20S1/KS1_2.5.2.2.swu",
+      "supported_models": [
+        "KS1"
+      ]
+    },
+    {
+      "version": "2.5.2.3",
+      "date": 1745319257,
+      "changes": "1.[Improve] File transfer stability\n2.[New] Mono print pause with feed/retract\n3.[New] Print score after completion",
+      "md5": "809240f0dfa1c9f0926db10f3fc6d786",
+      "url": "https://cdn.meowcat285.com/rinkhals/Kobra%20S1/KS1_2.5.2.3.swu",
+      "supported_models": [
+        "KS1"
+      ]
+    },
+    {
+      "version": "2.5.2.3",
+      "date": 1745319257,
+      "changes": "1.[Improve] File transfer stability\n2.[New] Mono print pause with feed/retract\n3.[New] Print score after completion",
+      "md5": "809240f0dfa1c9f0926db10f3fc6d786",
+      "url": "https://cdn.meowcat285.com/rinkhals/Kobra%20S1/KS1_2.5.2.3.swu",
+      "supported_models": [
+        "KS1"
+      ]
+    },
+    {
+      "version": "2.5.3.1",
+      "date": 1748257633,
+      "changes": "1.Purge volume config. in ACS Next\n2.More stable file transfers\n3.Added print again\n*ACSNext>=1.3.5",
+      "md5": "a4b8e2e98cfa3cc30a326a1b4543ff3a",
+      "url": "https://cdn.meowcat285.com/rinkhals/Kobra%20S1/KS1_2.5.3.1.swu",
+      "supported_models": [
+        "KS1"
+      ]
+    },
+    {
+      "version": "2.5.3.5",
+      "date": 1749807350,
+      "changes": "1. Added support for cold bed tem.\n2. Fixed printer status issues after tangling\n3. Fixed large file parsing failures\n4. Other issues fixed",
+      "md5": "13fa2536989d32b3f0f2291ceca2d51c",
+      "url": "https://cdn.meowcat285.com/rinkhals/Kobra%20S1/KS1_2.5.3.5.swu",
+      "supported_models": [
+        "KS1"
+      ]
+    },
+    {
+      "version": "2.5.3.8",
+      "date": 1750075468,
+      "changes": "1.Fixed PID Calibration issue\n2.Added support for cold bed tem\n3.Fixed printer status issues after tangling\n4.Fixed large file parsing failures",
+      "md5": "a2dfa51d7471b9af5f7f6d6febf4fd88",
+      "url": "https://cdn.meowcat285.com/rinkhals/Kobra%20S1/KS1_2.5.3.8.swu",
+      "supported_models": [
+        "KS1"
+      ]
+    },
+    {
+      "version": "2.5.6.0",
+      "date": 1753264867,
+      "changes": "1.New: Foreign object detection\n2.New: Adjustable AI detection sensitivity\n3.New: Type-based filament mapping\n4.Fixed: Extruder feeding issues from high-tem. filament residue",
+      "md5": "a652a5125ab3a332cce3b90b4930087a",
+      "url": "https://cdn.meowcat285.com/rinkhals/Kobra%20S1/KS1_2.5.6.0.swu",
+      "supported_models": [
+        "KS1"
+      ]
+    },
+    {
+      "version": "2.5.6.4",
+      "date": 1753950960,
+      "changes": "Fixed: Occasional print progress loss",
+      "md5": "cc28f5ec0147dc921be4efda1f7b07f0",
+      "url": "https://cdn.meowcat285.com/rinkhals/Kobra%20S1/KS1_2.5.6.4.swu",
+      "supported_models": [
+        "KS1"
+      ]
+    }
+  ]
+}
