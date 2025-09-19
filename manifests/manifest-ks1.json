@@ -94,6 +94,16 @@
       "supported_models": [
         "KS1"
       ]
+    },
+    {
+      "version": "2.5.8.8",
+      "date": 1758184924,
+      "changes": "1.Video service upgrade\n2.Print stop during prep phase\n3.0.2mm nozzle support\n4.M201/M203/M205 commands\n5.USB-Ethernet expansion",
+      "md5": "2dee1f49b09c297cbb208fdf0aa8b164",
+      "url": "https://cdn.cloud-universe.anycubic.com/attachment/1968596270633033730_jyo5b5g9.swu",
+      "supported_models": [
+        "KS1"
+      ]
     }
   ]
 }

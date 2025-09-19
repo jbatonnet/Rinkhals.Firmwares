@@ -24,6 +24,16 @@
       "supported_models": [
         "K3V2"
       ]
+    },
+    {
+      "version": "1.0.9.7",
+      "date": 1758193496,
+      "changes": "1.Video service upgrade\n2.Print stop during prep phase\n3.M201/M203/M205 commands",
+      "md5": "49022f9f9ae6a12ac0ad02f4788a5bdd",
+      "url": "https://cdn.cloud-universe.anycubic.com/attachment/1968632225322606593_m5fks39q.swu",
+      "supported_models": [
+        "K3V2"
+      ]
     }
   ]
 }

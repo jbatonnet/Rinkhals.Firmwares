@@ -1,10 +1,12 @@
 #!/bin/sh
 
+#set -x
+
 SCRIPT_DIRECTORY=$(dirname $0)
 BASE_DIRECTORY=$(dirname $(dirname $SCRIPT_DIRECTORY))
 
 PRINTER_MODEL_CODES="K2P K3 K3M K3V2 KS1"
-#PRINTER_MODEL_CODES="KS1"
+PRINTER_MODEL_CODES="K3M"
 
 get_printer_model_name() {
     case "$1" in
@@ -48,6 +50,8 @@ for PRINTER_MODEL_CODE in $PRINTER_MODEL_CODES; do
     UPDATE_DATE=$(echo "$UPDATE" | sed 's/$/\\n/' | tr -d '\n' | jq -r '.create_date' 2> /dev/null)
     UPDATE_CHANGES=$(echo "$UPDATE" | sed 's/$/\\n/' | tr -d '\n' | jq -r '.update_desc' 2> /dev/null)
 
+    #exit
+
     if [ -z "$UPDATE" ] || [ "$UPDATE_VERSION" = "$MANIFEST_LAST_VERSION" ]; then
         echo "  No update"
         continue
@@ -64,7 +68,7 @@ for PRINTER_MODEL_CODE in $PRINTER_MODEL_CODES; do
     [ -f .secrets/discord-env.sh ] && . .secrets/discord-env.sh
 
     DISCORD_MESSAGE="New firmware ${UPDATE_VERSION} available for ${PRINTER_MODEL_NAME}\n"
-    DISCORD_MESSAGE=$DISCORD_MESSAGE'```'$(echo $UPDATE | jq -r | sed 's/"/\\"/g' | sed 's/$/\\n/' | tr -d '\n')'```'
+    DISCORD_MESSAGE=$DISCORD_MESSAGE'```'$(echo $UPDATE | tr -d '\n' | jq -r | sed 's/"/\\"/g' | sed 's/$/\\n/' | tr -d '\n')'```'
 
     curl -H "Content-Type: application/json" \
          -X POST \
@@ -93,11 +97,11 @@ for PRINTER_MODEL_CODE in $PRINTER_MODEL_CODES; do
     ################
     # Update the manifests
 
-    UPLOAD_URL="https://cdn.meowcat285.com/rinkhals/${PRINTER_MODEL_NAME}/${PRINTER_MODEL_CODE}_${UPDATE_VERSION}.swu"
-    UPLOAD_URL=$(echo $UPLOAD_URL | sed 's/ /%20/')
-
     cat $MANIFEST_PATH | jq -r ".firmwares += [{\"version\":\"$UPDATE_VERSION\",\"date\":$UPDATE_DATE,\"changes\":\"$UPDATE_CHANGES\",\"md5\":\"$UPDATE_MD5\",\"url\":\"$UPDATE_URL\",\"supported_models\":[\"$PRINTER_MODEL_CODE\"]}]" \
         > $MANIFEST_PATH
+
+    UPLOAD_URL="https://cdn.meowcat285.com/rinkhals/${PRINTER_MODEL_NAME}/${PRINTER_MODEL_CODE}_${UPDATE_VERSION}.swu"
+    UPLOAD_URL=$(echo $UPLOAD_URL | sed 's/ /%20/g')
 
     cat $MANIFEST_MIRROR_PATH | jq -r ".firmwares += [{\"version\":\"$UPDATE_VERSION\",\"date\":$UPDATE_DATE,\"changes\":\"$UPDATE_CHANGES\",\"md5\":\"$UPDATE_MD5\",\"url\":\"$UPLOAD_URL\",\"supported_models\":[\"$PRINTER_MODEL_CODE\"]}]" \
         > $MANIFEST_MIRROR_PATH
