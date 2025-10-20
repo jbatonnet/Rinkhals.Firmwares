@@ -6,7 +6,7 @@ SCRIPT_DIRECTORY=$(dirname $0)
 BASE_DIRECTORY=$(dirname $(dirname $SCRIPT_DIRECTORY))
 
 PRINTER_MODEL_CODES="K2P K3 K3M K3V2 KS1"
-PRINTER_MODEL_CODES="K3M"
+#PRINTER_MODEL_CODES="K3M"
 
 get_printer_model_name() {
     case "$1" in
@@ -108,14 +108,13 @@ for PRINTER_MODEL_CODE in $PRINTER_MODEL_CODES; do
 
 
     ################
-    # Upload to the S3 bucket
+    # Upload to the storage
 
-    #echo "  Uploading to storage..."
-    #set -x
+    echo "  Uploading to storage..."
 
-    #[ -f .secrets/storage-env.sh ] && . .secrets/storage-env.sh
-    #rclone copyto --ignore-existing $UPDATE_PATH "Storage:/${PRINTER_MODEL_NAME}/${PRINTER_MODEL_CODE}_${UPDATE_VERSION}.swu"
-    #rclone copyto $MANIFEST_PATH "Storage:/${PRINTER_MODEL_NAME}/manifest.json"
+    [ -f .secrets/storage-env.sh ] && . .secrets/storage-env.sh
+    rclone copyto --ignore-existing $UPDATE_PATH "Storage:/${PRINTER_MODEL_NAME}/${PRINTER_MODEL_CODE}_${UPDATE_VERSION}.swu"
+    rclone copyto $MANIFEST_PATH "Storage:/${PRINTER_MODEL_NAME}/manifest.json"
 
 
     ################
