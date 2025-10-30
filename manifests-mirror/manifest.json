@@ -1,0 +1,39 @@
+{
+  "$version": "1",
+  "name": "Anycubic Kobra firmwares (Mirror)",
+  "description": "Mirror for Anycubic Kobra stock firmwares",
+  "repository": "https://raw.githubusercontent.com/jbatonnet/Rinkhals.Firmwares",
+  "self": "https://raw.githubusercontent.com/jbatonnet/Rinkhals.Firmwares/refs/heads/main/manifests-mirror/manifest.json",
+  "manifests": [
+    {
+      "url": "https://raw.githubusercontent.com/jbatonnet/Rinkhals.Firmwares/refs/heads/main/manifests-mirror/manifest-k2p.json",
+      "supported_models": [
+        "K2P"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jbatonnet/Rinkhals.Firmwares/refs/heads/main/manifests-mirror/manifest-k3.json",
+      "supported_models": [
+        "K3"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jbatonnet/Rinkhals.Firmwares/refs/heads/main/manifests-mirror/manifest-k3m.json",
+      "supported_models": [
+        "K3M"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jbatonnet/Rinkhals.Firmwares/refs/heads/main/manifests-mirror/manifest-k3v2.json",
+      "supported_models": [
+        "K3V2"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jbatonnet/Rinkhals.Firmwares/refs/heads/main/manifests-mirror/manifest-ks1.json",
+      "supported_models": [
+        "KS1"
+      ]
+    }
+  ]
+}

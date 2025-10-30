@@ -1,9 +1,9 @@
 {
   "$version": "1",
-  "name": "Anycubic Kobra 3 V2 firmwares",
-  "description": "Official archived Anycubic Kobra 3 V2 stock firmwares",
+  "name": "Anycubic Kobra 3 V2 firmwares (Official)",
+  "description": "Official Anycubic Kobra 3 V2 stock firmwares",
   "repository": "https://raw.githubusercontent.com/jbatonnet/Rinkhals.Firmwares",
-  "self": "https://raw.githubusercontent.com/jbatonnet/Rinkhals.Firmwares/refs/heads/main/manifests/manifest-k3v2.json",
+  "self": "https://raw.githubusercontent.com/jbatonnet/Rinkhals.Firmwares/refs/heads/main/manifests-anycubic/manifest-k3v2.json",
   "firmwares": [
     {
       "version": "1.0.5.8",

@@ -1,0 +1,26 @@
+{
+  "$version": "1",
+  "name": "Anycubic Kobra 2 Pro firmwares (Mirror)",
+  "description": "Mirror for Anycubic Kobra 2 Pro stock firmwares",
+  "repository": "https://rinkhals.thedju.net",
+  "self": "https://rinkhals.thedju.net/Kobra%202%20Pro/manifest.json",
+  "firmwares": [
+    {
+      "version": "3.1.2.3",
+      "md5": "a3984c039ea6b94f9fe8a4b1682f38a7",
+      "url": "https://rinkhals.thedju.net/Kobra%202%20Pro/K2P_3.1.2.3.swu",
+      "supported_models": [
+        "K2P"
+      ]
+    },
+    {
+      "version": "3.1.4",
+      "date": 1735207213,
+      "md5": "e12e44aee7343975bd1bbb5702236471",
+      "url": "https://rinkhals.thedju.net/Kobra%202%20Pro/K2P_3.1.4.swu",
+      "supported_models": [
+        "K2P"
+      ]
+    }
+  ]
+}
