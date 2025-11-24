@@ -1,0 +1,9 @@
+{
+  "$version": "1",
+  "name": "Anycubic Kobra S1 Max firmwares (Official)",
+  "description": "Official Anycubic Kobra S1 Max stock firmwares",
+  "repository": "https://raw.githubusercontent.com/jbatonnet/Rinkhals.Firmwares",
+  "self": "https://raw.githubusercontent.com/jbatonnet/Rinkhals.Firmwares/refs/heads/main/manifests-anycubic/manifest-ks1m.json",
+  "firmwares": [
+  ]
+}

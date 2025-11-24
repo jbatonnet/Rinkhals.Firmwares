@@ -133,6 +133,16 @@
       "supported_models": [
         "K3"
       ]
+    },
+    {
+      "version": "2.4.4.7",
+      "date": 1763964618,
+      "changes": "1.[New] Support for .gcode.3mf, and M73\n2.[New] Sending print files from OrcaSlicer\n3.[New] Remote time-lapse file management\n4.[New] Manual axis movement during paused\n5.[New] Motion control algorithm upgrade",
+      "md5": "5cb5805f07e1db4ee2a9bb2167c4b726",
+      "url": "https://rinkhals.thedju.net/Kobra%203/K3_2.4.4.7.swu",
+      "supported_models": [
+        "K3"
+      ]
     }
   ]
 }

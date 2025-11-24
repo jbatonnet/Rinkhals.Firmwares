@@ -5,7 +5,7 @@
 SCRIPT_DIRECTORY=$(dirname $0)
 BASE_DIRECTORY=$(dirname $(dirname $SCRIPT_DIRECTORY))
 
-PRINTER_MODEL_CODES="K2P K3 K3M K3V2 KS1"
+PRINTER_MODEL_CODES="K2P K3 K3M K3V2 KS1 KS1M"
 #PRINTER_MODEL_CODES="K3M"
 
 get_printer_model_name() {
@@ -15,6 +15,7 @@ get_printer_model_name() {
         "K3M") echo "Kobra 3 Max" ;;
         "K3V2") echo "Kobra 3 V2" ;;
         "KS1") echo "Kobra S1" ;;
+        "KS1M") echo "Kobra S1 Max" ;;
     esac
 }
 
@@ -23,11 +24,11 @@ for PRINTER_MODEL_CODE in $PRINTER_MODEL_CODES; do
 
     echo "Processing ${PRINTER_MODEL_NAME} (${PRINTER_MODEL_CODE})..."
 
-    MANIFEST_PATH=manifests/manifest-$(echo ${PRINTER_MODEL_CODE} | tr '[:upper:]' '[:lower:]').json
+    MANIFEST_PATH=manifests-anycubic/manifest-$(echo ${PRINTER_MODEL_CODE} | tr '[:upper:]' '[:lower:]').json
     MANIFEST_VERSIONS=$(cat $MANIFEST_PATH | jq -r '.firmwares[] | .version')
     MANIFEST_LAST_VERSION=$(cat $MANIFEST_PATH | jq -r '.firmwares | last | .version')
 
-    MANIFEST_MIRROR_PATH=manifests/manifest-$(echo ${PRINTER_MODEL_CODE} | tr '[:upper:]' '[:lower:]')-mirror.json
+    MANIFEST_MIRROR_PATH=manifests-mirror/manifest-$(echo ${PRINTER_MODEL_CODE} | tr '[:upper:]' '[:lower:]').json
     MANIFEST_MIRROR_VERSIONS=$(cat $MANIFEST_PATH | jq -r '.firmwares[] | .version')
     MANIFEST_MIRROR_LAST_VERSION=$(cat $MANIFEST_PATH | jq -r '.firmwares | last | .version')
 
@@ -100,7 +101,7 @@ for PRINTER_MODEL_CODE in $PRINTER_MODEL_CODES; do
     cat $MANIFEST_PATH | jq -r ".firmwares += [{\"version\":\"$UPDATE_VERSION\",\"date\":$UPDATE_DATE,\"changes\":\"$UPDATE_CHANGES\",\"md5\":\"$UPDATE_MD5\",\"url\":\"$UPDATE_URL\",\"supported_models\":[\"$PRINTER_MODEL_CODE\"]}]" \
         > $MANIFEST_PATH
 
-    UPLOAD_URL="https://cdn.meowcat285.com/rinkhals/${PRINTER_MODEL_NAME}/${PRINTER_MODEL_CODE}_${UPDATE_VERSION}.swu"
+    UPLOAD_URL="https://rinkhals.thedju.net/${PRINTER_MODEL_NAME}/${PRINTER_MODEL_CODE}_${UPDATE_VERSION}.swu"
     UPLOAD_URL=$(echo $UPLOAD_URL | sed 's/ /%20/g')
 
     cat $MANIFEST_MIRROR_PATH | jq -r ".firmwares += [{\"version\":\"$UPDATE_VERSION\",\"date\":$UPDATE_DATE,\"changes\":\"$UPDATE_CHANGES\",\"md5\":\"$UPDATE_MD5\",\"url\":\"$UPLOAD_URL\",\"supported_models\":[\"$PRINTER_MODEL_CODE\"]}]" \
@@ -114,7 +115,7 @@ for PRINTER_MODEL_CODE in $PRINTER_MODEL_CODES; do
 
     [ -f .secrets/storage-env.sh ] && . .secrets/storage-env.sh
     rclone copyto --ignore-existing $UPDATE_PATH "Storage:/${PRINTER_MODEL_NAME}/${PRINTER_MODEL_CODE}_${UPDATE_VERSION}.swu"
-    rclone copyto $MANIFEST_PATH "Storage:/${PRINTER_MODEL_NAME}/manifest.json"
+    rclone copyto $MANIFEST_MIRROR_PATH "Storage:/${PRINTER_MODEL_NAME}/manifest.json"
 
 
     ################

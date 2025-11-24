@@ -30,7 +30,17 @@
       "date": 1758193496,
       "changes": "1.Video service upgrade\n2.Print stop during prep phase\n3.M201/M203/M205 commands",
       "md5": "49022f9f9ae6a12ac0ad02f4788a5bdd",
-      "url": "https://rinkhals.thedju.net/Kobra%203 V2/K3V2_1.0.9.7.swu",
+      "url": "https://rinkhals.thedju.net/Kobra%203%20V2/K3V2_1.0.9.7.swu",
+      "supported_models": [
+        "K3V2"
+      ]
+    },
+    {
+      "version": "1.1.0.1",
+      "date": 1763964525,
+      "changes": "1.[New] Support for .gcode.3mf, and M73\n2.[New] Sending print files from OrcaSlicer\n3.[New] Remote time-lapse file management\n4.[New] Manual axis movement during paused\n5.[New] Motion control algorithm upgrade",
+      "md5": "f3ced01289c9b5f35f7f223c738d920b",
+      "url": "https://rinkhals.thedju.net/Kobra%203%20V2/K3V2_1.1.0.1.swu",
       "supported_models": [
         "K3V2"
       ]

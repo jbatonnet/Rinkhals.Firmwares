@@ -1,0 +1,9 @@
+{
+  "$version": "1",
+  "name": "Anycubic Kobra S1 Max firmwares (Mirror)",
+  "description": "Mirror for Anycubic Kobra S1 Max stock firmwares",
+  "repository": "https://rinkhals.thedju.net",
+  "self": "https://rinkhals.thedju.net/Kobra%20S1%20Max/manifest.json",
+  "firmwares": [
+  ]
+}

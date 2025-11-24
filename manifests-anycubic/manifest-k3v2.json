@@ -34,6 +34,16 @@
       "supported_models": [
         "K3V2"
       ]
+    },
+    {
+      "version": "1.1.0.1",
+      "date": 1763964525,
+      "changes": "1.[New] Support for .gcode.3mf, and M73\n2.[New] Sending print files from OrcaSlicer\n3.[New] Remote time-lapse file management\n4.[New] Manual axis movement during paused\n5.[New] Motion control algorithm upgrade",
+      "md5": "f3ced01289c9b5f35f7f223c738d920b",
+      "url": "https://cdn.cloud-universe.anycubic.com/attachment/1992837573319172097_94j3r0t5.swu",
+      "supported_models": [
+        "K3V2"
+      ]
     }
   ]
 }
