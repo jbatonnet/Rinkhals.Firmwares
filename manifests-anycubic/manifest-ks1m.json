@@ -5,5 +5,15 @@
   "repository": "https://raw.githubusercontent.com/jbatonnet/Rinkhals.Firmwares",
   "self": "https://raw.githubusercontent.com/jbatonnet/Rinkhals.Firmwares/refs/heads/main/manifests-anycubic/manifest-ks1m.json",
   "firmwares": [
+    {
+      "version": "2.1.6",
+      "date": 1765953133,
+      "changes": "2.1.6 update",
+      "md5": "135197ada538f501a0397d0051ba6b0d",
+      "url": "https://cdn.cloud-universe.anycubic.com/attachment/2001178039030751233_gettqfld.swu",
+      "supported_models": [
+        "KS1M"
+      ]
+    }
   ]
 }

@@ -5,5 +5,15 @@
   "repository": "https://rinkhals.thedju.net",
   "self": "https://rinkhals.thedju.net/Kobra%20S1%20Max/manifest.json",
   "firmwares": [
+    {
+      "version": "2.1.6",
+      "date": 1765953133,
+      "changes": "2.1.6 update",
+      "md5": "135197ada538f501a0397d0051ba6b0d",
+      "url": "https://rinkhals.thedju.net/Kobra%20S1%20Max/KS1_2.1.6.swu",
+      "supported_models": [
+        "KS1M"
+      ]
+    }
   ]
 }
