@@ -6,7 +6,7 @@ SCRIPT_DIRECTORY=$(dirname $0)
 BASE_DIRECTORY=$(dirname $(dirname $SCRIPT_DIRECTORY))
 
 PRINTER_MODEL_CODES="K2P K3 K3M K3V2 KS1 KS1M"
-#PRINTER_MODEL_CODES="K3M"
+#PRINTER_MODEL_CODES="KS1M"
 
 get_printer_model_name() {
     case "$1" in

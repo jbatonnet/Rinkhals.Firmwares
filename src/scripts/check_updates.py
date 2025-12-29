@@ -150,7 +150,7 @@ class CheckUpdateProgram:
                 self.firmware_version = '1.0.5.8'
             elif model_code == 'KS1M':
                 self.model_id = '20028'
-                self.firmware_version = '1.0.5.8'
+                self.firmware_version = '0.1.2.3'
             elif model_code.isdigit():
                 self.model_id = model_code
                 self.firmware_version = '1.2.3.4'

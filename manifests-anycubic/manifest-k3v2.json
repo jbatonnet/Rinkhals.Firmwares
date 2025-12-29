@@ -44,6 +44,16 @@
       "supported_models": [
         "K3V2"
       ]
+    },
+    {
+      "version": "1.1.0.4",
+      "date": 1766987931,
+      "changes": "1.Fixed: Part skipping issue after power loss recovery\n2.Other bug fixes",
+      "md5": "a4c7e90934b1cb3872d0f50e6ee088b3",
+      "url": "https://cdn.cloud-universe.anycubic.com/attachment/2005518747611013122_xg31lyal.swu",
+      "supported_models": [
+        "K3V2"
+      ]
     }
   ]
 }
