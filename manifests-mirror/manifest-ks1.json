@@ -114,6 +114,15 @@
       "supported_models": [
         "KS1"
       ]
+    },
+    {
+      "version": "2.5.9.9",
+      "changes": "-",
+      "md5": "f8040aca27e5a5204669d2541d63fd0f",
+      "url": "https://rinkhals.thedju.net/Kobra%20S1/KS1_2.5.9.9.swu",
+      "supported_models": [
+        "KS1"
+      ]
     }
   ]
 }
