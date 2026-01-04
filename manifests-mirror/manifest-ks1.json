@@ -116,10 +116,11 @@
       ]
     },
     {
-      "version": "2.5.9.9",
-      "changes": "-",
-      "md5": "f8040aca27e5a5204669d2541d63fd0f",
-      "url": "https://rinkhals.thedju.net/Kobra%20S1/KS1_2.5.9.9.swu",
+      "version": "2.6.0.0",
+      "date": 1767511278,
+      "changes": "1.Support .gcode.3mf, M73\n2.Support OrcaSlicer print file sending\n3.Support time-lapse file remote management\n4.Enable axis movement when print paused\n5.Fixed print head movement issues",
+      "md5": "4d1d6d68397c0969bb84b1a8c6812a4d",
+      "url": "https://rinkhals.thedju.net/Kobra%20S1/KS1_2.6.0.0.swu",
       "supported_models": [
         "KS1"
       ]
