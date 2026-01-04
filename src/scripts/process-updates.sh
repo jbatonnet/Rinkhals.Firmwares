@@ -99,13 +99,17 @@ for PRINTER_MODEL_CODE in $PRINTER_MODEL_CODES; do
     # Update the manifests
 
     cat $MANIFEST_PATH | jq -r ".firmwares += [{\"version\":\"$UPDATE_VERSION\",\"date\":$UPDATE_DATE,\"changes\":\"$UPDATE_CHANGES\",\"md5\":\"$UPDATE_MD5\",\"url\":\"$UPDATE_URL\",\"supported_models\":[\"$PRINTER_MODEL_CODE\"]}]" \
-        > $MANIFEST_PATH
+        > ${MANIFEST_PATH}.tmp
+    cp -f ${MANIFEST_PATH}.tmp $MANIFEST_PATH
+    rm -f ${MANIFEST_PATH}.tmp
 
     UPLOAD_URL="https://rinkhals.thedju.net/${PRINTER_MODEL_NAME}/${PRINTER_MODEL_CODE}_${UPDATE_VERSION}.swu"
     UPLOAD_URL=$(echo $UPLOAD_URL | sed 's/ /%20/g')
 
     cat $MANIFEST_MIRROR_PATH | jq -r ".firmwares += [{\"version\":\"$UPDATE_VERSION\",\"date\":$UPDATE_DATE,\"changes\":\"$UPDATE_CHANGES\",\"md5\":\"$UPDATE_MD5\",\"url\":\"$UPLOAD_URL\",\"supported_models\":[\"$PRINTER_MODEL_CODE\"]}]" \
-        > $MANIFEST_MIRROR_PATH
+        > ${MANIFEST_MIRROR_PATH}.tmp
+    cp -f ${MANIFEST_MIRROR_PATH}.tmp $MANIFEST_MIRROR_PATH
+    rm -f ${MANIFEST_MIRROR_PATH}.tmp
 
 
     ################
