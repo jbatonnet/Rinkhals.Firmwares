@@ -1,19 +1,13 @@
+## How to update firmwares
+
+Given all the environment is setup:
+
 ```
 wsl
 src/scripts/process-updates.sh
 ```
 
-Check \\192.168.2.2\Julien\Shares\Rinkhals\Firmwares\*\manifest.json
-
-```
-cd /mnt/nas/Julien/Shares/Rinkhals/Firmwares
-chmod -R 777 .
-```
-
-
-
-
-Unknown printers
+## Unknown printers
 
 ### 20028
 
