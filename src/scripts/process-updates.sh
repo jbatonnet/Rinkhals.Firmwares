@@ -80,6 +80,7 @@ for PRINTER_MODEL_CODE in $PRINTER_MODEL_CODES; do
     ################
     # Download the SWU update file
 
+    mkdir -p .tmp
     UPDATE_PATH=.tmp/${PRINTER_MODEL_CODE}_${UPDATE_VERSION}.swu
 
     if [ ! -f $UPDATE_PATH ]; then
