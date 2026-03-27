@@ -54,6 +54,16 @@
       "supported_models": [
         "K3V2"
       ]
+    },
+    {
+      "version": "1.1.2.8",
+      "date": 1772517797,
+      "changes": "1.Added support for ACE V2 and optimized communication stability with filament cartridges.\n2.Added SWEEP resonance mode to reduce resonance ringing.\n3.Updated device UI to support returning to the home screen during printing.",
+      "md5": "079fe84520cd2b00cb5793bae6ceb76f",
+      "url": "https://rinkhals.thedju.net/Kobra%203%20V2/K3V2_1.1.2.8.swu",
+      "supported_models": [
+        "K3V2"
+      ]
     }
   ]
 }

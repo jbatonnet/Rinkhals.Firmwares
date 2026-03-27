@@ -114,6 +114,16 @@
       "supported_models": [
         "KS1"
       ]
+    },
+    {
+      "version": "2.7.0.9",
+      "date": 1772439488,
+      "changes": "1.Added support for ACE V2 and optimized communication stability with filament cartridges.\n2.Fixed issues where printing could not be restarted or the device froze under various scenarios.\n3.Fixed other known issues to improve overall user experience.",
+      "md5": "88cb067b6f8712c8d401c492939ce43d",
+      "url": "https://cdn.cloud-universe.anycubic.com/attachment/2032364743452106753_ekjrsgp0.swu",
+      "supported_models": [
+        "KS1"
+      ]
     }
   ]
 }

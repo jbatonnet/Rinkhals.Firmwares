@@ -113,6 +113,16 @@
       "supported_models": [
         "K3"
       ]
+    },
+    {
+      "version": "2.4.6.7",
+      "date": 1772517314,
+      "changes": "1.Added support for ACE V2 and optimized communication stability with filament cartridges.\n2.Added SWEEP resonance mode to reduce resonance ringing.\n3.Updated device UI to support returning to the home screen during printing.",
+      "md5": "2da500d370ded3f8d3b1ae1b96874d23",
+      "url": "https://cdn.cloud-universe.anycubic.com/attachment/2034091598257430530_op42x1jf.swu",
+      "supported_models": [
+        "K3"
+      ]
     }
   ]
 }

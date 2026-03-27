@@ -24,6 +24,16 @@
       "supported_models": [
         "KS1M"
       ]
+    },
+    {
+      "version": "2.6.9.2",
+      "date": 1774607148,
+      "changes": "1.Optimized ghosting issues caused by filament out resumption.\n2.Fixed motor operation failures when printing large models.\n3.Resolved abnormal machine operation during large model printing.",
+      "md5": "384247f1694b07eceb9b8f85c78c8426",
+      "url": "https://cdn.cloud-universe.anycubic.com/attachment/2037476061142163457_dfd26mac.swu",
+      "supported_models": [
+        "KS1M"
+      ]
     }
   ]
 }
