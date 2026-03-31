@@ -64,17 +64,17 @@ for PRINTER_MODEL_CODE in $PRINTER_MODEL_CODES; do
     ################
     # Send a Discord notification
 
-    echo "  Sending Discord notification..."
+    # echo "  Sending Discord notification..."
 
-    [ -f .secrets/discord-env.sh ] && . .secrets/discord-env.sh
+    # [ -f .secrets/discord-env.sh ] && . .secrets/discord-env.sh
 
-    DISCORD_MESSAGE="New firmware ${UPDATE_VERSION} available for ${PRINTER_MODEL_NAME}\n"
-    DISCORD_MESSAGE=$DISCORD_MESSAGE'```'$(echo $UPDATE | tr -d '\n' | jq -r | sed 's/"/\\"/g' | sed 's/$/\\n/' | tr -d '\n')'```'
+    # DISCORD_MESSAGE="New firmware ${UPDATE_VERSION} available for ${PRINTER_MODEL_NAME}\n"
+    # DISCORD_MESSAGE=$DISCORD_MESSAGE'```'$(echo $UPDATE | tr -d '\n' | jq -r | sed 's/"/\\"/g' | sed 's/$/\\n/' | tr -d '\n')'```'
 
-    curl -H "Content-Type: application/json" \
-         -X POST \
-         -d "{\"content\": \"$(echo $DISCORD_MESSAGE | sed 's/$/\\n/' | tr -d '\n')\"}" \
-         $DISCORD_WEBHOOK_URL
+    # curl -H "Content-Type: application/json" \
+    #      -X POST \
+    #      -d "{\"content\": \"$(echo $DISCORD_MESSAGE | sed 's/$/\\n/' | tr -d '\n')\"}" \
+    #      $DISCORD_WEBHOOK_URL
 
 
     ################
